@@ -31,7 +31,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
                     return res.status(500).send(`An error occurred: ${error.message}`);
                 }
                 // Return the secure URL of the uploaded image
-                return res.status(200).send(`Uploaded Image URL: ${result.secure_url}`);
+                return res.status(200).send(`${result.secure_url}`);
             }
         );
 
